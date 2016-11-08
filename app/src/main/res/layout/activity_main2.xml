@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="listview.cursoandroid.com.senhaszanardo.Main2Activity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/equipID"
+        android:layout_marginTop="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/txEquip"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_alignRight="@+id/salvarID"
+        android:layout_alignEnd="@+id/salvarID" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp"
+        android:layout_alignBottom="@+id/equipID" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:id="@+id/voltarID"
+        android:layout_marginTop="102dp"
+        android:layout_below="@+id/senhaID"
+        android:layout_toLeftOf="@+id/senhaID"
+        android:layout_toStartOf="@+id/senhaID" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:id="@+id/salvarID"
+        android:layout_alignTop="@+id/voltarID"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="34dp"
+        android:layout_marginEnd="34dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Equipamento"
+        android:id="@+id/txEquip"
+        android:layout_alignTop="@+id/equipID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/Margem" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Usuario"
+        android:id="@+id/txUser"
+        android:layout_below="@+id/equipID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/Margem" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Senha"
+        android:id="@+id/txSenha"
+        android:layout_below="@+id/userID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="false"
+        android:layout_margin="@dimen/Margem" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userID"
+        android:layout_alignTop="@+id/txUser"
+        android:layout_alignLeft="@+id/equipID"
+        android:layout_alignStart="@+id/equipID"
+        android:layout_alignRight="@+id/equipID"
+        android:layout_alignEnd="@+id/equipID" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/senhaID"
+        android:layout_alignTop="@+id/txSenha"
+        android:layout_alignLeft="@+id/userID"
+        android:layout_alignStart="@+id/userID"
+        android:layout_alignRight="@+id/userID"
+        android:layout_alignEnd="@+id/userID" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Novo Equipamento"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
