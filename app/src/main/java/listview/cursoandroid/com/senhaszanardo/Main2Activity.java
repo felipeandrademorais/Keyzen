@@ -36,8 +36,6 @@ public class Main2Activity extends MainActivity {
         setContentView(R.layout.activity_main2);
 
         try {
-
-
             //Criando tabela
             bancoDados.execSQL("CREATE TABLE IF NOT EXISTS senhas (id INTEGER PRIMARY KEY AUTOINCREMENT,nome VARCHAR, usuario VARCHAR, senha VARCHAR)");
 
@@ -46,18 +44,18 @@ public class Main2Activity extends MainActivity {
             usuario = (EditText) findViewById(R.id.userID);
             senha = (EditText) findViewById(R.id.senhaID);
 
+            //Inicializa Botões
             btSalvar = (Button) findViewById(R.id.salvarID);
             btVoltar = (Button) findViewById(R.id.voltarID);
 
-
-            //Botão Salvar
+            //Função Botão Salvar
             btSalvar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
-                    String equi = equipamento.toString();
-                    String usu = usuario.toString();
-                    String sen = senha.toString();
+                    String equi = equipamento.getText().toString();
+                    String usu = usuario.getText().toString();
+                    String sen = senha.getText().toString();
 
                     bancoDados.execSQL("INSERT INTO senhas(nome,usuario,senha) VALUES ('"+equi+"','"+usu+"','"+sen+"')");
                     btSalvar.setEnabled(false);
@@ -65,15 +63,13 @@ public class Main2Activity extends MainActivity {
                 }
             });
 
-
-            //Botão Voltar
+            //Função Botão Voltar
             btVoltar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(Main2Activity.this, MainActivity.class));
                 }
             });
-
         }catch (Exception e){
             e.printStackTrace();
         }
